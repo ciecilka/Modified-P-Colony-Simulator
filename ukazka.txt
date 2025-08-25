@@ -1,0 +1,41 @@
+# use lambda instead of emptystring 
+# Format:
+# 1. row: alphabet (characters separated with space)
+# 2. row: environmental symbol
+# 3. row: content of MP Colony
+# 4. row: UPDATE
+# 5. row: opplus numplus opminus numminus  
+# 6. row: FIN
+# 7. row: output region (0 for environment,agent number - in the order how they are defined)
+# 8. row: final object (empty if not defined - work with all objects) 
+# 9. row: mode of getting result - emr, epr, hr
+# 10. row: AGENT
+# 11. row: content of Agent
+# 12. row: rule of the form type lhs rhs RAI
+#          next rows with rules (one rule per row)
+# repeat Agent, content and rules
+#
+#
+a e
+e
+lambda
+UPDATE
+times 2 div 2
+FIN
+3
+a
+emr
+AGENT
+a
+evo a a 1
+com a a 1
+AGENT
+a
+evo a lambda 1
+com a a 1
+AGENT
+lambda
+evo lambda a 1
+AGENT
+a
+evo a a 1
