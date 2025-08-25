@@ -216,7 +216,7 @@ def read_colony_from_file(file: str) -> Colony:
         rows = [r.strip() for r in f if r.strip() and not r.startswith('#')]
     
     alph=rows[0].split()
-    print(alph)
+    #print(alph)
     
     env_chr=check_env(rows[1],alph)
 
